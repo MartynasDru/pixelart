@@ -1,0 +1,11 @@
+@import '../../../styles/colors.scss';
+
+.button {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3rem;
+  border-radius: .4rem;
+  height: 4rem;
+  border: none;
+  background-color: $PRIMARY_COLOR;
+  color: $WHITE;
+}
