@@ -1,19 +1,21 @@
 import * as React from 'react';
-
 import './Header.scss';
 import {Button} from '../common/Button/Button';
-import {Tabs} from "./Tabs/Tabs";
+import {ButtonTypes} from '../../utils/utils';
 
 export const Header: React.FunctionComponent = () => (
-    <div className='header'>
-        <div className='header__app-name'>Pixelart</div>
-        <div className='header__navigation'>
-            <Button
-                className='header__action-button'
-            >
-                Get in touch
-            </Button>
-            <Tabs />
+    <header className='header'>
+        <div className='header__text-container'>
+            <h1 className='header__title'>PixelArt Agency</h1>
+            <p className='header__description'>We are creative design and development professionals</p>
         </div>
-    </div>
+        <div className='header__buttons'>
+            <Button buttonType={ButtonTypes.White}>
+                Let`s talk!
+            </Button>
+            <Button buttonType={ButtonTypes.Outlined}>
+                About us
+            </Button>
+        </div>
+    </header>
 );

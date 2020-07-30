@@ -1,0 +1,96 @@
+@import '../../styles/colors';
+
+.main {
+  background-color: $WHITE;
+  padding: 2rem;
+  border-radius: .4rem;
+  box-shadow: 1px 1px 0 #dfdfdf;
+
+  .article {
+
+    &__date {
+      font-size: 1.4rem;
+      color: $ARTICLE_TEXT;
+      margin-bottom: .5rem;
+    }
+
+    &__title {
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 3.6rem;
+    }
+
+    &__sub-title {
+      font-size: 1.8rem;
+      line-height: 2.6rem;
+      font-weight: 400;
+      margin: 1.8rem 0 2rem 0;
+    }
+
+    &__text-wrapper {
+      display: grid;
+      grid-gap: 2rem;
+    }
+
+    &__text {
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+      color: $ARTICLE_TEXT;
+    }
+
+    &__split-paragraph {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+    }
+  }
+
+  .highlighted-text-box {
+    background-color: $HIGHLIGHTED_TEXT_BOX_BACKGROUND;
+    padding: 4rem;
+    border-top-right-radius: .4rem;
+    border-bottom-right-radius: .4rem;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 4rem;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: -4rem;
+      background-color: $HIGHLIGHTED_TEXT_BOX_BACKGROUND;
+      border-top-left-radius: .4rem;
+    }
+
+    &::after {
+      content: '';
+      width: 1.9rem;
+      height: 1rem;
+      background-color: $HIGHLIGHTED_TEXT_BOX_SHADOW;
+      position: absolute;
+      bottom: -1rem;
+      left: -4rem;
+      clip-path: polygon(100% 0, 0 0, 100% 100%);
+    }
+
+    &__quote-sign {
+      font-family: 'Georgia', sans-serif;;
+      line-height: 8.2rem;
+      font-size: 8.2rem;
+      position: absolute;
+      top: 1.5rem;
+      left: -2rem;
+      color: $ARTICLE_TEXT;
+    }
+
+    &__text {
+      color: $HIGHLIGHTED_TEXT_BOX_TEXT;
+      margin-bottom: 1rem;
+    }
+
+    &__cite {
+      font-size: 1.6rem;
+    }
+  }
+}

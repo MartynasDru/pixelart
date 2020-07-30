@@ -1,24 +1,36 @@
+@import '../../styles/colors';
+
 .header {
-  padding: 0 16rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  background-image: linear-gradient(to right, #da00c5 0%, #450ab5 100%);
+  color: $WHITE;
+  text-align: center;
+  padding: 11rem 0;
 
-  &__app-name {
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    font-size: 2.4rem;
+  &__text-container {
+    margin-bottom: 5rem;
   }
 
-  &__navigation {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  &__title {
+    font-size: 6.4rem;
+    line-height: 7.4rem;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
   }
 
-  &__action-button {
-    margin-right: 2.5rem;
-    padding: .8rem 2.8rem;
+  &__description {
+    margin-top: .6rem;
+    font-size: 1.8rem;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+
+    button {
+      width: 16rem;
+    }
+
+    button:nth-child(2) {
+      margin-left: 2rem;
+    }
   }
 }

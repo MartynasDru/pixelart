@@ -1,0 +1,31 @@
+@import '../../../../styles/colors';
+
+.card {
+  border-radius: .4rem;
+  padding: 2rem;
+
+  &.highlighted {
+    background-color: $BLACK;
+    color: $WHITE
+  }
+
+  &__title {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    letter-spacing: .2rem;
+  }
+
+  &__separator {
+    display: block;
+    width: 4rem;
+    height: .3rem;
+    background-image: linear-gradient(to right, #da00c5 0%, #450ab5 100%);
+    margin: 2rem 0;
+  }
+
+  &__description {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+}
