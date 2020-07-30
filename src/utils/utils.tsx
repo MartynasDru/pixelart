@@ -1,12 +1,15 @@
 interface IHeaderNavigationTabs {
     [key: string]: {
         title: string,
+        link: string,
         options?: Array<IHeaderNavigationTabOption>
+
     }
 }
 
 export interface IHeaderNavigationTabOption {
-    title: string
+    title: string,
+    link: string
 }
 
 export interface IInfoCard {
@@ -24,39 +27,50 @@ export enum NavigationTabs {
 
 export const NavigationTabsInfo: IHeaderNavigationTabs = {
     [NavigationTabs.AboutUs]: {
-        title: 'About us'
+        title: 'About us',
+        link: '/about-us'
     },
     [NavigationTabs.Portfolio]: {
         title: 'Portfolio',
+        link: '/portfolio',
         options: [
             {
-                title: 'Creative web design'
+                title: 'Creative web design',
+                link: '/creative-web-design'
             },
             {
-                title: 'Mobile applications'
+                title: 'Mobile applications',
+                link: '/mobile-applications'
             },
             {
-                title: 'Print design'
+                title: 'Print design',
+                link: '/print-design'
             },
             {
-                title: 'Branding solutions'
+                title: 'Branding solutions',
+                link: '/branding-solutions'
             },
             {
-                title: 'Miscellaneous'
+                title: 'Miscellaneous',
+                link: '/misc'
             }
         ]
     },
     [NavigationTabs.ContactUs]: {
-        title: 'Contact Us'
+        title: 'Contact Us',
+        link: '/contact-us'
     },
     [NavigationTabs.Gallery]: {
         title: 'Gallery',
+        link: '/gallery',
         options: [
             {
-                title: 'Devbridge gallery #1'
+                title: 'Devbridge gallery #1',
+                link: '/gallery1'
             },
             {
-                title: 'Devbridge gallery #2'
+                title: 'Devbridge gallery #2',
+                link: '/gallery2'
             }
         ]
     }

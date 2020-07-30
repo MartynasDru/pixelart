@@ -8,7 +8,7 @@ interface ILogoProps {
 
 export const Logo: React.FunctionComponent<ILogoProps> = props => (
     <a
-        href='#'
+        href='/home'
         className={joinTruthy([
             'logo',
             props.className
