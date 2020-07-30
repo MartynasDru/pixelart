@@ -1,3 +1,67 @@
-.sidebar {
+@import '../../styles/colors';
+
+.login-box {
   padding: 2rem;
+  border-radius: .4rem;
+  box-shadow: 1px 1px 0 #dfdfdf;
+  background-color: $WHITE;
+
+  &__title {
+    color: $TITLE_BLACK;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
+
+  &__inputs-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0 4rem 0;
+  }
+
+  &__field-wrapper:not(:last-child) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  &__input {
+    background-color: $INPUT_BACKGROUND_LIGHT_GRAY;
+    border: 1px solid #dfdfdf;
+    border-radius: .4rem;
+    color: $ARTICLE_TEXT;
+    font-size: 1.4rem;
+    padding: 1rem 1.5rem;
+
+    &:focus {
+      background-color: #fafafa;
+    }
+
+    &::placeholder {
+      font-style: italic;
+    }
+  }
+
+  &__input-label {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $ARTICLE_TEXT;
+    margin-bottom: 1rem;
+  }
+
+  &__submit-button {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  &__register-link-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__register-link {
+    color: #6b28d7;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    text-decoration: underline;
+  }
 }
