@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './Logo.scss';
-import {joinTruthy} from "../../../utils/utils";
+import {joinTruthy} from '../../../utils/utils';
 
 interface ILogoProps {
     className?: string;

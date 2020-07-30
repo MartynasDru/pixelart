@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './Main.scss';
-import {joinTruthy} from "../../utils/utils";
+import {joinTruthy} from '../../utils/utils';
 
 export const Main: React.FunctionComponent = () => (
     <main className='main'>

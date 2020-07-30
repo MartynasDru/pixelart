@@ -3,7 +3,7 @@ import './styles/App.scss';
 import {Navigation} from './components/Navigation/Navigation';
 import {Main} from './components/Main/Main';
 import {Header} from './components/Header/Header';
-import {InfoCards} from './components/Main/InfoCards/InfoCards';
+import {InfoCards} from './components/InfoCards/InfoCards';
 import {Sidebar} from './components/Sidebar/Sidebar';
 
 function App() {
