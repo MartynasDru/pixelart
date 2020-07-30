@@ -1,0 +1,43 @@
+@import '../../../styles/colors';
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+
+  .checkbox__with-border {
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid #dfdfdf;
+    border-radius: .2rem;
+    background-color: $INPUT_BACKGROUND_LIGHT_GRAY;
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+
+    &.checked:before {
+      content: '';
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      background-color: #8657df;
+      position: absolute;
+      top: .4rem;
+      left: .4rem;
+      border-radius: .2rem;
+    }
+  }
+
+  input[type="checkbox"] {
+    position: absolute;
+    visibility: hidden;
+    cursor: pointer;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    color: $ARTICLE_TEXT;
+    margin-left: 2rem;
+  }
+}
