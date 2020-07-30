@@ -1,0 +1,66 @@
+@import '../../styles/colors';
+$ASSETS_PATH: '../../styles/assets';
+
+.navigation {
+  padding: 0 16rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: $WHITE;
+  height: 8rem;
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__action-button {
+    margin-right: 2.5rem;
+    width: 13rem;
+  }
+
+  &__tabs {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__tab {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    padding: 0 2.5rem 0 2.5rem;
+  }
+
+  .active {
+    background-color: $ACTIVE_NAVIGATION_TAB;
+  }
+
+  &__link {
+    color: $BLACK;
+    text-decoration: none;
+  }
+
+  .expand-icon {
+    -webkit-mask-image: url('#{$ASSETS_PATH}/Triangle.svg');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center center;
+    background-color: $BLACK;
+    width: .6rem;
+    height: .3rem;
+    margin-left: 1rem;
+  }
+}
