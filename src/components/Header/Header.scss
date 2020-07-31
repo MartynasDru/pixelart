@@ -1,7 +1,7 @@
 @import '../../styles/colors';
 
 .header {
-  background-image: linear-gradient(to right, #da00c5 0%, #450ab5 100%);
+  background-image: $MAIN_GRADIENT;
   color: $WHITE;
   text-align: center;
   padding: 11rem 0;

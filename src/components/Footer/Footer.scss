@@ -73,7 +73,7 @@
   }
 
   &__logo {
-    background-image: linear-gradient(to right, #da00c5 0%, #450ab5 100%);
+    background-image: $MAIN_GRADIENT;
     -webkit-background-clip: text;
     color: transparent;
   }
@@ -87,7 +87,7 @@
   &__separator {
     display: block;
     height: 4px;
-    background-image: linear-gradient(to right, #da00c5 0%, #450ab5 100%);
+    background-image: $MAIN_GRADIENT;
   }
 
   &__copyright {

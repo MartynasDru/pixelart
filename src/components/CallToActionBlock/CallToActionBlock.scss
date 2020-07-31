@@ -22,7 +22,7 @@
     width: 100%;
     border-top-left-radius: .4rem;
     border-top-right-radius: .4rem;
-    background-image: linear-gradient(to right, #da00c5 0%, #450ab5 100%);
+    background-image: $MAIN_GRADIENT;
   }
 
   &__title {
