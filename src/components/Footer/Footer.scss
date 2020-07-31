@@ -1,0 +1,102 @@
+@import './../../styles/colors.scss';
+
+.footer {
+  background-color: $FOOTER_BACKGROUND;
+
+  &__main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 8rem 16rem;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    padding: 0 6.7rem 0 1.9rem;
+
+    &:not(:last-child) {
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__column-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    color: $TITLE_BLACK;
+  }
+
+  &__column-content {
+    margin-top: 1rem;
+  }
+
+  &__list {
+    font-size: 1.3rem;
+    line-height: 3.2rem;
+    color: $HIGHLIGHTED_TEXT_BOX_TEXT;
+  }
+
+  &__topics li {
+    position: relative;
+    padding-left: .5rem;
+
+    &::before {
+      content: '';
+      display: block;
+      width: .2rem;
+      height: .2rem;
+      background-color: black;
+      position: absolute;
+      left: 0;
+      border-radius: 50%;
+      top: calc(50% - .01rem);
+    }
+  }
+
+  &__contacts {
+    line-height: 2.1rem;
+
+    label {
+      display: inline-block;
+      font-weight: 700;
+      width: 4.5rem;
+    }
+  }
+
+  &__logo {
+    background-image: linear-gradient(to right, #da00c5 0%, #450ab5 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  &__slogan {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+  }
+
+  &__separator {
+    display: block;
+    height: 4px;
+    background-image: linear-gradient(to right, #da00c5 0%, #450ab5 100%);
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $BLACK;
+    font-size: 1.2rem;
+    color: #a5a5a5;
+    height: 3.7rem;
+  }
+}
