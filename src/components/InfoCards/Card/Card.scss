@@ -6,7 +6,9 @@
 
   &.highlighted {
     background-color: $BLACK;
-    color: $WHITE
+    color: $WHITE;
+    border-radius: 4px;
+    box-shadow: 1px 1px 0 #dfdfdf;
   }
 
   &__title {

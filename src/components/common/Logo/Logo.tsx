@@ -14,6 +14,6 @@ export const Logo: React.FunctionComponent<ILogoProps> = props => (
             props.className
         ])}
     >
-        <strong>Pixel</strong><span>art</span>
+        <b>Pixel</b><span>art</span>
     </a>
 );

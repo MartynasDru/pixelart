@@ -5,6 +5,7 @@ import {Main} from './components/Main/Main';
 import {Header} from './components/Header/Header';
 import {InfoCards} from './components/InfoCards/InfoCards';
 import {Sidebar} from './components/Sidebar/Sidebar';
+import {CallToActionBlock} from './components/CallToActionBlock/CallToActionBlock';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
               <Main />
               <Sidebar />
           </div>
-          <div className='cta'>Tailored design for Your business to make it unique and attractive!</div>
+          <CallToActionBlock />
       </div>
     </div>
   );
