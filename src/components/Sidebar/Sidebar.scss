@@ -39,6 +39,12 @@
     &::placeholder {
       font-style: italic;
     }
+
+    &.error {
+      background-color: $BACKGROUND_COLOR_WARNING;
+      border: .1rem solid $BORDER_COLOR_WARNING;
+      color: $RED;
+    }
   }
 
   &__input-label {
@@ -46,6 +52,11 @@
     font-weight: 700;
     color: $ARTICLE_TEXT;
     margin-bottom: 1rem;
+    margin-right: 1rem;
+  }
+
+  &__input-error-text {
+    color: $RED;
   }
 
   &__submit-button {
