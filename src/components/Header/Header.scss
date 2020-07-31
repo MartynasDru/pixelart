@@ -33,4 +33,15 @@
       margin-left: 2rem;
     }
   }
+
+  &__button--white {
+    background-color: $WHITE;
+    color: $BLACK;
+  }
+
+  &__button--outlined {
+    background-color: transparent;
+    color: $WHITE;
+    border: .1rem solid $WHITE;
+  }
 }

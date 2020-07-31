@@ -1,7 +1,6 @@
 import * as React from 'react';
 import './Header.scss';
 import {Button} from '../common/Button/Button';
-import {ButtonTypes} from '../../utils/utils';
 
 export const Header: React.FunctionComponent = () => (
     <header className='header'>
@@ -10,10 +9,10 @@ export const Header: React.FunctionComponent = () => (
             <p className='header__description'>We are creative design and development professionals</p>
         </div>
         <div className='header__buttons'>
-            <Button buttonType={ButtonTypes.White}>
+            <Button className='header__button--white'>
                 Let`s talk!
             </Button>
-            <Button buttonType={ButtonTypes.Outlined}>
+            <Button className='header__button--outlined'>
                 About us
             </Button>
         </div>

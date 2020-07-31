@@ -9,15 +9,4 @@
   background-color: $PRIMARY_COLOR;
   color: $WHITE;
   cursor: pointer;
-
-  &--outlined {
-    background-color: transparent;
-    color: $WHITE;
-    border: .1rem solid $WHITE;
-  }
-
-  &--white {
-    background-color: $WHITE;
-    color: $BLACK;
-  }
 }
