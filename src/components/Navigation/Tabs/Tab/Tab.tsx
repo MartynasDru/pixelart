@@ -4,7 +4,7 @@ import '../../Navigation.scss';
 import {Dropdown} from '../Dropdown/Dropdown';
 import {useState} from 'react';
 
-interface ITabProps {
+export interface ITabProps {
     options?: Array<IHeaderNavigationTabOption>;
     onClick: () => void;
     isActive: boolean;
@@ -14,32 +14,34 @@ interface ITabProps {
 export const Tab: React.FunctionComponent<ITabProps> = props => {
     const [isTabHovered, setIsTabHovered] = useState<boolean>(false);
     return (
-        <>
-            <li
-                className={joinTruthy([
-                    'navigation__tab',
-                    props.isActive && 'active'
-                ])}
-                onClick={props.onClick}
-                onMouseEnter={() => setIsTabHovered(true)}
-                onMouseLeave={() => setIsTabHovered(false)}
+        <li
+            data-qa='tab'
+            className={joinTruthy([
+                'navigation__tab',
+                props.isActive && 'active'
+            ])}
+            onClick={props.onClick}
+            onMouseEnter={() => setIsTabHovered(true)}
+            onMouseLeave={() => setIsTabHovered(false)}
+        >
+            <a
+                href={props.link}
             >
-                <a
-                    href={props.link}
-                >
-                    {props.children}
-                </a>
-                {
-                    props.options &&
-                    <span className='expand-icon'/>
-                }
-                {
-                    (props.options && isTabHovered ) &&
-                    <Dropdown
-                        options={props.options}
-                    />
-                }
-            </li>
-        </>
+                {props.children}
+            </a>
+            {
+                props.options &&
+                <span
+                    data-qa='expand-icon'
+                    className='expand-icon'
+                />
+            }
+            {
+                (props.options && isTabHovered ) &&
+                <Dropdown
+                    options={props.options}
+                />
+            }
+        </li>
     );
 }

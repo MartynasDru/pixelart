@@ -1,12 +1,12 @@
 import React from 'react';
 import * as Enzyme from 'enzyme';
-import {Button} from './Button';
+import {Main} from './Main';
 
-describe('Button', () => {
+describe('Main', () => {
     const setup = () => {
 
         const wrapper = Enzyme.mount(
-            <Button />
+            <Main />
         );
 
         return wrapper;

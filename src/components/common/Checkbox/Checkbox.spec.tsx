@@ -31,7 +31,7 @@ describe('Checkbox', () => {
             checked: true
         }).wrapper;
         expect(wrapper.find('.checked').length).toBe(1);
-    })
+    });
 
     it('should have label if labelText property is passed', () => {
         let wrapper = setup().wrapper;
@@ -41,11 +41,11 @@ describe('Checkbox', () => {
             labelText: 'Checkbox label'
         }).wrapper;
         expect(wrapper.find('[data-qa="checkbox-label"]').length).toBe(1);
-    })
+    });
 
-    it('should have label if labelText property is passed', () => {
+    it('should execute onChange function which is passed through props when changes happen', () => {
         let {wrapper, props} = setup();
         wrapper.find('[data-qa="checkbox-input"]').simulate('change');
         expect(props.onChange).toBeCalled();
-    })
+    });
 })
