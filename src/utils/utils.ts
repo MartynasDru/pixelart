@@ -1,21 +1,20 @@
 interface IHeaderNavigationTabs {
     [key: string]: {
-        title: string,
-        link: string,
-        options?: Array<IHeaderNavigationTabOption>
-
+        title: string;
+        link: string;
+        options?: Array<IHeaderNavigationTabOption>;
     }
 }
 
 export interface IHeaderNavigationTabOption {
-    title: string,
-    link: string
+    title: string;
+    link: string;
 }
 
 export interface IInfoCard {
-    id?: number,
-    title: string,
-    description: string
+    id?: number;
+    title: string;
+    description: string;
 }
 
 export enum NavigationTabs {
