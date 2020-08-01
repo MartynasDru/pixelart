@@ -1,13 +1,19 @@
-import {IHeaderNavigationTab, IInfoCard} from "./contracts";
+import {IContact, IHeaderNavigationTab, IInformationCard, ITopic} from './contracts';
 
 export enum NavigationTabs {
     AboutUs = 'AboutUs',
     Portfolio = 'Portfolio',
     ContactUs = 'ContactUs',
-    Gallery = 'Gallery',
+    Gallery = 'Gallery'
 }
 
-export const NavigationTabsInfo: {[key:string] : IHeaderNavigationTab} = {
+export enum InformationCards {
+    BrandingIdentity = 'BrandingIdentity',
+    WebDesign = 'WebDesign',
+    AppDevelopment = 'AppDevelopment'
+}
+
+export const NavigationTabsData: {[key in NavigationTabs] : IHeaderNavigationTab} = {
     [NavigationTabs.AboutUs]: {
         title: 'About us',
         link: '/about-us'
@@ -58,20 +64,63 @@ export const NavigationTabsInfo: {[key:string] : IHeaderNavigationTab} = {
     }
 }
 
-export const CardsInformation: Array<IInfoCard> = [
-    {
-        id: 0,
+export const InformationCardsData: {[key in InformationCards]: IInformationCard} = {
+    [InformationCards.BrandingIdentity]: {
         title: 'Branding identity',
         description: 'Repurpose professionally accurate initiatives without ubiquitous deliverables. Energistically engineer resource maximizing quality.'
     },
-    {
-        id: 1,
+    [InformationCards.WebDesign]: {
         title: 'Web design',
         description: 'Progressively reintermediate market positioning partnerships whereas visionary content.'
     },
-    {
-        id: 2,
+    [InformationCards.AppDevelopment]: {
         title: 'App development',
         description: 'Supply efficient integrated architectures with unique best practices. Assertively strategize pandemic sources.'
+    }
+}
+
+export const TopicsData: Array<ITopic> = [
+    {
+        title: 'First impressions in web design',
+        link: '/first-impressions'
+    },
+    {
+        title: 'Advanced SEO solutions',
+        link: '/seo-solutions'
+    },
+    {
+        title: 'UX design 101',
+        link: '/ux-design'
+    },
+    {
+        title: 'What’s the secret behind minimal designs',
+        link: '/minimal-design'
+    }
+]
+
+export const ContactsData: Array<IContact> = [
+    {
+        label: 'Street',
+        info: '4411 Bicetown Road'
+    },
+    {
+        label: 'City',
+        info: 'New York'
+    },
+    {
+        label: 'State',
+        info: 'NY'
+    },
+    {
+        label: 'Zip',
+        info: '10222'
+    },
+    {
+        label: 'Phone',
+        info: '917-369-8748'
+    },
+    {
+        label: 'Email',
+        info: 'hello@pixelart.com'
     }
 ]

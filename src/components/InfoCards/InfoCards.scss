@@ -1,4 +1,5 @@
 @import '../../styles/mixins';
+@import '../../styles/colors';
 
 .info-cards {
   display: grid;
@@ -7,5 +8,37 @@
 
   @include medium-device {
     grid-template-columns: 1fr;
+  }
+
+  &__card {
+    border-radius: .4rem;
+    padding: 2rem;
+
+    &.highlighted {
+      background-color: $BLACK;
+      color: $WHITE;
+      border-radius: 4px;
+      box-shadow: 1px 1px 0 #dfdfdf;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    letter-spacing: .2rem;
+  }
+
+  &__separator {
+    display: block;
+    width: 4rem;
+    height: .3rem;
+    background-image: $MAIN_GRADIENT;
+    margin: 2rem 0;
+  }
+
+  &__description {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
   }
 }

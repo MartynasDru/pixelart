@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {NavigationTabsInfo} from '../../../utils/mockData';
+import {NavigationTabsData} from '../../../utils/mockData';
 import '../NavigationBar.scss';
 import {BurgerNavigationItem} from '../BurgerNavigationItem/BurgerNavigationItem';
 
@@ -10,11 +10,12 @@ interface IBurgerNavigationProps {
 
 export const BurgerNavigation: React.FunctionComponent<IBurgerNavigationProps> = props => (
     <ul className='burger-navigation'>
-        {Object.entries(NavigationTabsInfo).map((tab, index) => (
+        {Object.entries(NavigationTabsData).map((tabData, index) => (
             <BurgerNavigationItem
-                onClick={() => props.setActiveTab(tab[0])}
-                isActive={props.activeTab === tab[0]}
-                tabInfo={tab[1]}
+                key={index}
+                onClick={() => props.setActiveTab(tabData[0])}
+                isActive={props.activeTab === tabData[0]}
+                tabInfo={tabData[1]}
             />
         ))}
     </ul>

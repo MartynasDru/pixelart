@@ -9,8 +9,17 @@ export interface IHeaderNavigationTabOption {
     link: string;
 }
 
-export interface IInfoCard {
-    id?: number;
+export interface IInformationCard {
     title: string;
     description: string;
+}
+
+export interface ITopic {
+    title: string;
+    link: string;
+}
+
+export interface IContact {
+    label: string;
+    info: string;
 }

@@ -3,6 +3,7 @@ import './Footer.scss';
 import {Logo} from '../common/Logo/Logo';
 import {FooterColumn} from './FooterColumn/FooterColumn';
 import {joinTruthy} from '../../utils/utils';
+import {ContactsData, TopicsData} from '../../utils/mockData';
 
 export const Footer: React.FunctionComponent = () => (
     <div className='footer'>
@@ -21,18 +22,15 @@ export const Footer: React.FunctionComponent = () => (
                 title='Topics'
                 content={
                     <ul className='footer__list'>
-                        <li>
-                            <a href='/first-impressions'>· First impressions in web design</a>
-                        </li>
-                        <li>
-                            <a href='/seo-solutions'>· Advanced SEO solutions</a>
-                        </li>
-                        <li>
-                            <a href='/ux-design'>· UX design 101</a>
-                        </li>
-                        <li>
-                            <a href='/minimal-design'>· What’s the secret behind minimal designs</a>
-                        </li>
+                        {
+                            TopicsData.map((topicData, index) => (
+                                <li
+                                    key={index}
+                                >
+                                    <a href={topicData.link}>· {topicData.title}</a>
+                                </li>
+                            ))
+                        }
                     </ul>
                 }
             />
@@ -43,24 +41,15 @@ export const Footer: React.FunctionComponent = () => (
                         'footer__list',
                         'footer__contacts'
                     ])}>
-                        <li>
-                            <label>Street:</label> 4411 Bicetown Road
-                        </li>
-                        <li>
-                            <label>City:</label> New York
-                        </li>
-                        <li>
-                            <label>State:</label> NY
-                        </li>
-                        <li>
-                            <label>Zip:</label> 10222
-                        </li>
-                        <li>
-                            <label>Phone:</label> 917-369-8748
-                        </li>
-                        <li>
-                            <label>Email:</label> hello@pixelart.com
-                        </li>
+                        {
+                            ContactsData.map((contactData, index) => (
+                                <li
+                                    key={index}
+                                >
+                                    <label>{contactData.label}:</label> {contactData.info}
+                                </li>
+                            ))
+                        }
                     </ul>}
             />
         </div>

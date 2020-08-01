@@ -1,19 +1,18 @@
 import * as React from 'react';
-import './Card.scss';
 import {joinTruthy} from '../../../utils/utils';
-import {IInfoCard} from '../../../utils/contracts';
+import {IInformationCard} from '../../../utils/contracts';
 
-interface ICardProps extends IInfoCard {
+interface ICardProps extends IInformationCard {
     isHighlighted: boolean;
 }
 
 export const Card: React.FunctionComponent<ICardProps> = props => (
     <div className={joinTruthy([
-        'card',
+        'info-cards__card',
         props.isHighlighted && 'highlighted'
     ])}>
-        <h3 className='card__title'>{props.title}</h3>
-        <span className='card__separator' />
-        <div className='card__description'>{props.description}</div>
+        <h3 className='info-cards__title'>{props.title}</h3>
+        <span className='info-cards__separator' />
+        <div className='info-cards__description'>{props.description}</div>
     </div>
 );
