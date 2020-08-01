@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './InfoCards.scss';
-import {CardsInformation} from '../../utils/utils';
+import {CardsInformation} from '../../utils/mockData';
 import {Card} from './Card/Card';
 
 

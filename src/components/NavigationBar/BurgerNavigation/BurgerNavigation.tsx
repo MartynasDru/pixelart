@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {NavigationTabsInfo} from '../../../utils/utils';
+import {NavigationTabsInfo} from '../../../utils/mockData';
 import '../NavigationBar.scss';
 import {BurgerNavigationItem} from '../BurgerNavigationItem/BurgerNavigationItem';
 

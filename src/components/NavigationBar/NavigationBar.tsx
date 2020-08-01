@@ -6,7 +6,7 @@ import {Tabs} from './Tabs/Tabs';
 import {Logo} from '../common/Logo/Logo';
 import {BurgerNavigation} from './BurgerNavigation/BurgerNavigation';
 import {useState} from 'react';
-import {NavigationTabs} from '../../utils/utils';
+import {NavigationTabs} from '../../utils/mockData';
 
 export const NavigationBar: React.FunctionComponent = () => {
     const [activeTab, setActiveTab] = useState<string>(NavigationTabs.AboutUs);

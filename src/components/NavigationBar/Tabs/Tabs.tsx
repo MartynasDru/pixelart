@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Tab} from '../Tab/Tab';
-import {NavigationTabsInfo} from '../../../utils/utils';
+import {NavigationTabsInfo} from '../../../utils/mockData';
 import '../NavigationBar.scss';
 
 export interface ITabsProps {
