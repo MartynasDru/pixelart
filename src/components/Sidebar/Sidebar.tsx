@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './Sidebar.scss';
-import {useState} from 'react';
+import {useRef, useState} from 'react';
 import {Button} from '../common/Button/Button';
 import {Checkbox} from '../common/Checkbox/Checkbox';
 import {joinTruthy} from '../../utils/utils';
@@ -18,6 +18,8 @@ interface IFormInfo {
 }
 
 export const Sidebar: React.FunctionComponent = () => {
+    const emailInputRef = useRef<HTMLInputElement | null>(null);
+    const passwordInputRef = useRef<HTMLInputElement | null>(null);
     const [formInformation, setFormInformation] = useState<IFormInfo>({
         email: {
             email: '',
@@ -33,6 +35,13 @@ export const Sidebar: React.FunctionComponent = () => {
     const checkIsEmailValid = () => {
         const emailPattern = new RegExp(/^(('[\w-\s]+')|([\w-]+(?:\.[\w-]+)*)|('[\w-\s]+')([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
         const formInfoCopy = Object.assign({}, formInformation, {});
+        if (emailInputRef.current) {
+            formInfoCopy.email.email = emailInputRef.current?.value
+        }
+        if (passwordInputRef.current) {
+            formInfoCopy.password.password = passwordInputRef.current.value;
+        }
+
         let isValid = true;
         if (!formInformation.email.email) {
             isValid = false;
@@ -107,7 +116,10 @@ export const Sidebar: React.FunctionComponent = () => {
                 className='login-box'
             >
                 <h3 className='login-box__title'>Client zone</h3>
-                <form onSubmit={handleFormSubmit}>
+                <form
+                    onSubmit={handleFormSubmit}
+                    autoComplete='on'
+                >
                     <div className='login-box__inputs-wrapper'>
                         <div
                             className='login-box__field-wrapper'
@@ -126,6 +138,7 @@ export const Sidebar: React.FunctionComponent = () => {
                                 }
                             </div>
                             <input
+                                ref={emailInputRef}
                                 type='text'
                                 className={joinTruthy([
                                     'login-box__input',
@@ -134,6 +147,7 @@ export const Sidebar: React.FunctionComponent = () => {
                                 placeholder='your@email.here'
                                 name='email'
                                 onBlur={handleEmailInputOnBlur}
+                                autoComplete='username'
                             />
                         </div>
                         <div
@@ -153,6 +167,7 @@ export const Sidebar: React.FunctionComponent = () => {
                                 }
                             </div>
                             <input
+                                ref={passwordInputRef}
                                 type='password'
                                 className={joinTruthy([
                                     'login-box__input',
@@ -161,6 +176,7 @@ export const Sidebar: React.FunctionComponent = () => {
                                 placeholder='********'
                                 name='psw'
                                 onBlur={handlePasswordInputOnBlur}
+                                autoComplete='current-password'
                             />
                         </div>
                         <div
