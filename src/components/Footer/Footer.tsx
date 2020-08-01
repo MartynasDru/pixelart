@@ -20,21 +20,18 @@ export const Footer: React.FunctionComponent = () => (
             <FooterColumn
                 title='Topics'
                 content={
-                    <ul className={joinTruthy([
-                        'footer__list',
-                        'footer__topics'
-                    ])}>
+                    <ul className='footer__list'>
                         <li>
-                            First impressions in web design
+                            · First impressions in web design
                         </li>
                         <li>
-                            Advanced SEO solutions
+                            · Advanced SEO solutions
                         </li>
                         <li>
-                            UX design 101
+                            · UX design 101
                         </li>
                         <li>
-                            What’s the secret behind minimal designs
+                            · What’s the secret behind minimal designs
                         </li>
                     </ul>
                 }

@@ -45,23 +45,6 @@
     color: $HIGHLIGHTED_TEXT_BOX_TEXT;
   }
 
-  &__topics li {
-    position: relative;
-    padding-left: .5rem;
-
-    &::before {
-      content: '';
-      display: block;
-      width: .2rem;
-      height: .2rem;
-      background-color: black;
-      position: absolute;
-      left: 0;
-      border-radius: 50%;
-      top: calc(50% - .01rem);
-    }
-  }
-
   &__contacts {
     line-height: 2.1rem;
 
