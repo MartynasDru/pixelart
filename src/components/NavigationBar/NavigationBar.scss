@@ -122,18 +122,23 @@ $ASSETS_PATH: '../../styles/assets';
     font-size: 1.3rem;
     line-height: 2.9rem;
     color: $ARTICLE_TEXT;
-    padding: .5rem 1rem;
     cursor: pointer;
 
     &:not(:last-child) {
       border-bottom: 1px solid #efefef;
     }
 
-    &:first-child {
+    & > a {
+      display: block;
+      padding: .5rem 1rem;
+      width: 100%;
+    }
+
+    &:first-child > a {
       padding: 0 1rem .5rem 1rem;
     }
 
-    &:last-child {
+    &:last-child > a {
       padding: .5rem 1rem 0 1rem;
     }
   }

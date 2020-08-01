@@ -35,14 +35,12 @@ export const Sidebar: React.FunctionComponent = () => {
     const checkIsEmailValid = () => {
         const emailPattern = new RegExp(/^(('[\w-\s]+')|([\w-]+(?:\.[\w-]+)*)|('[\w-\s]+')([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
         const formInfoCopy = Object.assign({}, formInformation, {});
+        let isValid = true;
+
         if (emailInputRef.current) {
             formInfoCopy.email.email = emailInputRef.current?.value
         }
-        if (passwordInputRef.current) {
-            formInfoCopy.password.password = passwordInputRef.current.value;
-        }
 
-        let isValid = true;
         if (!formInformation.email.email) {
             isValid = false;
             formInfoCopy.email.error = 'Please enter your email.';
@@ -54,6 +52,7 @@ export const Sidebar: React.FunctionComponent = () => {
                 formInfoCopy.email.error = '';
             }
         }
+
         setFormInformation(formInfoCopy);
         return isValid;
     }
@@ -61,6 +60,11 @@ export const Sidebar: React.FunctionComponent = () => {
     const checkIsPasswordValid = () => {
         const formInfoCopy = Object.assign({}, formInformation, {});
         let isValid = true;
+
+        if (passwordInputRef.current) {
+            formInfoCopy.password.password = passwordInputRef.current.value;
+        }
+
         if (!formInfoCopy.password.password) {
             isValid = false;
             formInfoCopy.password.error = 'Please enter your password.';
@@ -72,6 +76,7 @@ export const Sidebar: React.FunctionComponent = () => {
                 formInfoCopy.password.error = '';
             }
         }
+
         setFormInformation(formInfoCopy);
         return isValid;
     }

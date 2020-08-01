@@ -42,6 +42,7 @@ export const Tab: React.FunctionComponent<ITabProps> = props => {
                 (props.options && isTabHovered ) &&
                 <Dropdown
                     options={props.options}
+                    onClick={props.onClick}
                 />
             }
         </li>

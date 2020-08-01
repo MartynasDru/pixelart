@@ -4,6 +4,7 @@ import {IHeaderNavigationTabOption} from '../../../utils/contracts';
 
 export interface IDropdownProps {
     options: Array<IHeaderNavigationTabOption>;
+    onClick: () => void;
 }
 
 export const Dropdown: React.FunctionComponent<IDropdownProps> = props => (
@@ -17,6 +18,7 @@ export const Dropdown: React.FunctionComponent<IDropdownProps> = props => (
                     key={index}
                     data-qa='dropdown-row'
                     className='navigation-bar__tab-dropdown-row'
+                    onClick={props.onClick}
                 >
                     <a
                         href={option.link}
