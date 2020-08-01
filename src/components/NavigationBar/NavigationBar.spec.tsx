@@ -1,12 +1,12 @@
 import React from 'react';
 import * as Enzyme from 'enzyme';
-import {Navigation} from './Navigation';
+import {NavigationBar} from './NavigationBar';
 
 describe('Navigation', () => {
     const setup = () => {
 
         const wrapper = Enzyme.mount(
-            <Navigation />
+            <NavigationBar />
         );
 
         return wrapper;

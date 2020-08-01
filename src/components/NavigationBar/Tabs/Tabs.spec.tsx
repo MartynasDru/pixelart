@@ -1,13 +1,17 @@
 import React from 'react';
 import * as Enzyme from 'enzyme';
-import {Tabs} from './Tabs';
-import {NavigationTabsInfo} from '../../../utils/utils';
+import {ITabsProps, Tabs} from './Tabs';
+import {NavigationTabs, NavigationTabsInfo} from '../../../utils/utils';
 
 describe('Tabs', () => {
-    const setup = () => {
+    const setup = (_props?: Partial<ITabsProps>) => {
+        const props: ITabsProps = Object.assign({}, {
+            activeTab: NavigationTabs.AboutUs,
+            setActiveTab: jest.fn()
+        }, _props);
 
         const wrapper = Enzyme.mount(
-            <Tabs />
+            <Tabs {...props}/>
         );
 
         return wrapper;

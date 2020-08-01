@@ -1,4 +1,5 @@
 @import '../../styles/colors';
+@import '../../styles/mixins';
 
 .header {
   background-image: $MAIN_GRADIENT;
@@ -24,6 +25,11 @@
   &__buttons {
     display: flex;
     justify-content: center;
+    align-items: center;
+
+    @include small-device {
+      flex-direction: column;
+    }
 
     button {
       width: 16rem;
@@ -31,6 +37,11 @@
 
     button:nth-child(2) {
       margin-left: 2rem;
+
+      @include small-device {
+        margin-left: 0;
+        margin-top: 2rem;
+      }
     }
   }
 

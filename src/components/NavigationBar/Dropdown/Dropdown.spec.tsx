@@ -1,7 +1,7 @@
 import React from 'react';
 import * as Enzyme from 'enzyme';
 import {Dropdown, IDropdownProps} from './Dropdown';
-import {NavigationTabs, NavigationTabsInfo} from '../../../../utils/utils';
+import {NavigationTabs, NavigationTabsInfo} from '../../../utils/utils';
 
 describe('Dropdown', () => {
     const setup = (_props?: Partial<IDropdownProps>) => {

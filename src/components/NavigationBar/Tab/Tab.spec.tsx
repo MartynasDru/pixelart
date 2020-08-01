@@ -1,7 +1,7 @@
 import React from 'react';
 import * as Enzyme from 'enzyme';
 import {ITabProps, Tab} from './Tab';
-import {NavigationTabs, NavigationTabsInfo} from '../../../../utils/utils';
+import {NavigationTabs, NavigationTabsInfo} from '../../../utils/utils';
 
 describe('Tab', () => {
     const setup = (_props?: Partial<ITabProps>) => {
@@ -38,7 +38,7 @@ describe('Tab', () => {
 
     it('should execute onClick function which is passed through props when it`s clicked on tab', () => {
         let {wrapper, props} = setup();
-        wrapper.find('[data-qa="tab"]').simulate('click');
+        wrapper.find('[data-qa="tab-link"]').simulate('click');
         expect(props.onClick).toBeCalled();
     });
 

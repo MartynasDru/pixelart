@@ -1,13 +1,23 @@
+@import './mixins';
+
 .content-wrapper {
   display: grid;
   grid-template-rows: repeat(3, auto);
   background-color: #F5F5F5;
   padding: 4rem 16rem;
 
+  @include large-device {
+    padding: 1rem 4rem;
+  }
+
   &__main {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-gap: 2rem;
     margin: 4rem 0 2rem 0;
+
+    @include medium-device {
+      grid-template-columns: 1fr;
+    }
   }
 }

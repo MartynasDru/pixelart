@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/App.scss';
-import {Navigation} from './components/Navigation/Navigation';
+import {NavigationBar} from './components/NavigationBar/NavigationBar';
 import {Main} from './components/Main/Main';
 import {Header} from './components/Header/Header';
 import {InfoCards} from './components/InfoCards/InfoCards';
@@ -11,7 +11,7 @@ import {Footer} from './components/Footer/Footer';
 function App() {
   return (
     <div className='app'>
-        <Navigation />
+        <NavigationBar />
         <Header />
         <div className='content-wrapper'>
           <InfoCards />

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {IHeaderNavigationTabOption, joinTruthy} from '../../../../utils/utils';
-import '../../Navigation.scss';
+import {IHeaderNavigationTabOption, joinTruthy} from '../../../utils/utils';
+import '../NavigationBar.scss';
 import {Dropdown} from '../Dropdown/Dropdown';
 import {useState} from 'react';
 
@@ -17,25 +17,26 @@ export const Tab: React.FunctionComponent<ITabProps> = props => {
         <li
             data-qa='tab'
             className={joinTruthy([
-                'navigation__tab',
+                'navigation-bar__tab',
                 props.isActive && 'active'
             ])}
-            onClick={props.onClick}
             onMouseEnter={() => setIsTabHovered(true)}
             onMouseLeave={() => setIsTabHovered(false)}
         >
             <a
+                data-qa='tab-link'
                 href={props.link}
+                onClick={props.onClick}
             >
                 {props.children}
+                {
+                    props.options &&
+                    <span
+                        data-qa='expand-icon'
+                        className='expand-icon'
+                    />
+                }
             </a>
-            {
-                props.options &&
-                <span
-                    data-qa='expand-icon'
-                    className='expand-icon'
-                />
-            }
             {
                 (props.options && isTabHovered ) &&
                 <Dropdown
