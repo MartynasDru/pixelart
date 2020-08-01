@@ -22,16 +22,16 @@ export const Footer: React.FunctionComponent = () => (
                 content={
                     <ul className='footer__list'>
                         <li>
-                            · First impressions in web design
+                            <a href='/first-impressions'>· First impressions in web design</a>
                         </li>
                         <li>
-                            · Advanced SEO solutions
+                            <a href='/seo-solutions'>· Advanced SEO solutions</a>
                         </li>
                         <li>
-                            · UX design 101
+                            <a href='/ux-design'>· UX design 101</a>
                         </li>
                         <li>
-                            · What’s the secret behind minimal designs
+                            <a href='/minimal-design'>· What’s the secret behind minimal designs</a>
                         </li>
                     </ul>
                 }
