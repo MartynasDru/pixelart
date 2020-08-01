@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './Card.scss';
-import {IInfoCard, joinTruthy} from '../../../utils/utils';
+import {joinTruthy} from '../../../utils/utils';
+import {IInfoCard} from '../../../utils/contracts';
 
 interface ICardProps extends IInfoCard {
     isHighlighted: boolean;

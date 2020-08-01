@@ -1,6 +1,6 @@
 import * as React from 'react';
 import '../NavigationBar.scss';
-import {IHeaderNavigationTabOption} from '../../../utils/utils';
+import {IHeaderNavigationTabOption} from '../../../utils/contracts';
 
 export interface IDropdownProps {
     options: Array<IHeaderNavigationTabOption>;

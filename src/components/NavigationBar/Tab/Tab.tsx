@@ -1,8 +1,9 @@
 import * as React from 'react';
-import {IHeaderNavigationTabOption, joinTruthy} from '../../../utils/utils';
+import {joinTruthy} from '../../../utils/utils';
 import '../NavigationBar.scss';
 import {Dropdown} from '../Dropdown/Dropdown';
 import {useState} from 'react';
+import {IHeaderNavigationTabOption} from '../../../utils/contracts';
 
 export interface ITabProps {
     options?: Array<IHeaderNavigationTabOption>;

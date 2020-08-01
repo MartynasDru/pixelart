@@ -1,6 +1,7 @@
 import * as React from 'react';
-import {IHeaderNavigationTab, joinTruthy} from '../../../utils/utils';
+import {joinTruthy} from '../../../utils/utils';
 import '../NavigationBar.scss';
+import {IHeaderNavigationTab} from '../../../utils/contracts';
 
 interface IBurgerNavigationItemProps {
     onClick: () => void;
