@@ -1,7 +1,7 @@
 import React from 'react';
 import * as Enzyme from 'enzyme';
 import {ITabProps, Tab} from './Tab';
-import {NavigationTabs, NavigationTabsInfo} from '../../../utils/utils';
+import {NavigationTabs, NavigationTabsData} from '../../../utils/mockData';
 
 describe('Tab', () => {
     const setup = (_props?: Partial<ITabProps>) => {
@@ -23,32 +23,32 @@ describe('Tab', () => {
     };
 
     it('renders without crashing', () => {
-        const wrapper = setup();
+        setup();
     });
 
     it('should have active class if isActive property is passed true', () => {
         let wrapper = setup().wrapper;
-        expect(wrapper.find('.active').length).toBe(0);
+        expect(wrapper.find('.navigation-bar__tab.active').length).toBe(0);
 
         wrapper = setup({
             isActive: true
         }).wrapper;
-        expect(wrapper.find('.active').length).toBe(1);
+        expect(wrapper.find('.navigation-bar__tab.active').length).toBe(1);
     });
 
     it('should execute onClick function which is passed through props when it`s clicked on tab', () => {
         let {wrapper, props} = setup();
-        wrapper.find('[data-qa="tab-link"]').simulate('click');
+        wrapper.find('.navigation-bar__tab-link').simulate('click');
         expect(props.onClick).toBeCalled();
     });
 
     it('tab should have expand icon if there is options/dropdown to show', () => {
         let wrapper = setup().wrapper;
-        expect(wrapper.find('[data-qa="expand-icon"]').length).toBe(0);
+        expect(wrapper.find('.expand-icon').length).toBe(0);
 
         wrapper = setup({
-            options: NavigationTabsInfo[NavigationTabs.Portfolio].options
+            options: NavigationTabsData[NavigationTabs.Portfolio].options
         }).wrapper;
-        expect(wrapper.find('[data-qa="expand-icon"]').length).toBe(1);
+        expect(wrapper.find('.expand-icon').length).toBe(1);
     })
 })

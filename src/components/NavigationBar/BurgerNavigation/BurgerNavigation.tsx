@@ -3,13 +3,15 @@ import {NavigationTabsData} from '../../../utils/mockData';
 import '../NavigationBar.scss';
 import {BurgerNavigationItem} from '../BurgerNavigationItem/BurgerNavigationItem';
 
-interface IBurgerNavigationProps {
+export interface IBurgerNavigationProps {
     activeTab: string;
     setActiveTab: (activeTab: string) => void;
 }
 
 export const BurgerNavigation: React.FunctionComponent<IBurgerNavigationProps> = props => (
-    <ul className='burger-navigation'>
+    <ul
+        className='burger-navigation'
+    >
         {Object.entries(NavigationTabsData).map((tabData, index) => (
             <BurgerNavigationItem
                 key={index}

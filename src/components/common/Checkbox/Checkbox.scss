@@ -1,12 +1,11 @@
 @import '../../../styles/colors';
 
-.checkbox {
+.checkbox-wrapper {
   display: flex;
   flex-direction: row;
 
-  .checkbox__with-border {
+  .checkbox {
     cursor: pointer;
-    display: inline-block;
     border: 1px solid #dfdfdf;
     border-radius: .2rem;
     background-color: $INPUT_BACKGROUND_LIGHT_GRAY;
@@ -33,7 +32,7 @@
     cursor: pointer;
   }
 
-  &__label {
+  .checkbox__label {
     display: flex;
     align-items: center;
     font-size: 1.4rem;

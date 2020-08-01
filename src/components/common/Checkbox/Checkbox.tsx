@@ -9,16 +9,15 @@ export interface ICheckboxProps {
 }
 
 export const Checkbox: React.FunctionComponent<ICheckboxProps> = props => (
-    <div className='checkbox'>
+    <div className='checkbox-wrapper'>
         <label
-            data-qa='checkbox'
             className={joinTruthy([
-                'checkbox__with-border',
+                'checkbox',
                 props.checked && 'checked'
             ])}
         >
             <input
-                data-qa='checkbox-input'
+                className='checkbox__input'
                 type='checkbox'
                 checked={props.checked}
                 name='remember'
@@ -29,7 +28,6 @@ export const Checkbox: React.FunctionComponent<ICheckboxProps> = props => (
         {
             props.labelText &&
             <label
-                data-qa='checkbox-label'
                 className='checkbox__label'
             >
                 {props.labelText}

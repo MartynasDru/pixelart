@@ -13,6 +13,6 @@ describe('Main', () => {
     };
 
     it('renders without crashing', () => {
-        const wrapper = setup();
+        setup();
     });
 })

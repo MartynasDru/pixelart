@@ -77,10 +77,6 @@ $ASSETS_PATH: '../../styles/assets';
     width: .6rem;
     height: .3rem;
     margin-left: 1rem;
-
-    &.active {
-      background-color: $WHITE;
-    }
   }
 
   &__tab-dropdown {
@@ -180,7 +176,7 @@ $ASSETS_PATH: '../../styles/assets';
     }
   }
 
-  &__item-text, &__sub-item-text {
+  &__item-link, &__sub-item {
     display: flex;
     align-items: center;
     height: 5rem;
@@ -196,7 +192,7 @@ $ASSETS_PATH: '../../styles/assets';
     display: none;
     margin-bottom: 2rem;
   }
-  &__sub-item-text {
+  &__sub-item {
     font-weight: 400;
   }
 }

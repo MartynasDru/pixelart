@@ -13,6 +13,14 @@ describe('Navigation', () => {
     };
 
     it('renders without crashing', () => {
-        const wrapper = setup();
+        setup();
+    });
+
+    it('should open burger navigation dropdown when open icon is clicked', () => {
+       let wrapper = setup();
+       expect(wrapper.find('.burger-navigation').length).toBe(0);
+
+       wrapper.find('.navigation-bar__toggle-open').simulate('click');
+       expect(wrapper.find('.burger-navigation').length).toBe(1);
     });
 })

@@ -20,32 +20,32 @@ describe('Checkbox', () => {
     };
 
     it('renders without crashing', () => {
-        const {wrapper} = setup();
+        setup();
     });
 
     it('should have checked class if checked property is passed true', () => {
         let wrapper = setup().wrapper;
-        expect(wrapper.find('.checked').length).toBe(0);
+        expect(wrapper.find('.checkbox.checked').length).toBe(0);
 
         wrapper = setup({
             checked: true
         }).wrapper;
-        expect(wrapper.find('.checked').length).toBe(1);
+        expect(wrapper.find('.checkbox.checked').length).toBe(1);
     });
 
     it('should have label if labelText property is passed', () => {
         let wrapper = setup().wrapper;
-        expect(wrapper.find('[data-qa="checkbox-label"]').length).toBe(0);
+        expect(wrapper.find('.checkbox__label').length).toBe(0);
 
         wrapper = setup({
             labelText: 'Checkbox label'
         }).wrapper;
-        expect(wrapper.find('[data-qa="checkbox-label"]').length).toBe(1);
+        expect(wrapper.find('.checkbox__label').length).toBe(1);
     });
 
     it('should execute onChange function which is passed through props when changes happen', () => {
         let {wrapper, props} = setup();
-        wrapper.find('[data-qa="checkbox-input"]').simulate('change');
+        wrapper.find('.checkbox__input').simulate('change');
         expect(props.onChange).toBeCalled();
     });
 })

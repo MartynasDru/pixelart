@@ -9,14 +9,12 @@ export interface IDropdownProps {
 
 export const Dropdown: React.FunctionComponent<IDropdownProps> = props => (
     <ul
-        data-qa='dropdown'
         className='navigation-bar__tab-dropdown'
     >
         {
             props.options.map((option, index) => (
                 <li
                     key={index}
-                    data-qa='dropdown-row'
                     className='navigation-bar__tab-dropdown-row'
                     onClick={props.onClick}
                 >

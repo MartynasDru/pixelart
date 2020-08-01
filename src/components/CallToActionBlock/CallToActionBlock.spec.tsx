@@ -13,6 +13,6 @@ describe('CallToActionBlock', () => {
     };
 
     it('renders without crashing', () => {
-        const wrapper = setup();
+        setup();
     });
 })

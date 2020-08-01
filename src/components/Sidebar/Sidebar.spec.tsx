@@ -1,12 +1,12 @@
 import React from 'react';
 import * as Enzyme from 'enzyme';
-import {Logo} from './Logo';
+import {Sidebar} from './Sidebar';
 
-describe('Logo', () => {
+describe('Sidebar', () => {
     const setup = () => {
 
         const wrapper = Enzyme.mount(
-            <Logo />
+            <Sidebar />
         );
 
         return wrapper;

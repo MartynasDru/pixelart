@@ -3,7 +3,7 @@ import {joinTruthy} from '../../../utils/utils';
 import '../NavigationBar.scss';
 import {IHeaderNavigationTab} from '../../../utils/contracts';
 
-interface IBurgerNavigationItemProps {
+export interface IBurgerNavigationItemProps {
     onClick: () => void;
     isActive: boolean;
     tabInfo: IHeaderNavigationTab;
@@ -15,7 +15,7 @@ export const BurgerNavigationItem: React.FunctionComponent<IBurgerNavigationItem
         <a
             href={props.tabInfo.link}
             className={joinTruthy([
-                'burger-navigation__item-text',
+                'burger-navigation__item-link',
                 props.isActive && 'active'
             ])}
             onClick={() => props.onClick()}
@@ -24,11 +24,7 @@ export const BurgerNavigationItem: React.FunctionComponent<IBurgerNavigationItem
             {
                 props.tabInfo.options &&
                 <span
-                    data-qa='expand-icon'
-                    className={joinTruthy([
-                        'expand-icon',
-                        props.isActive && 'active'
-                    ])}
+                    className='expand-icon'
                 />
             }
         </a>
@@ -40,7 +36,7 @@ export const BurgerNavigationItem: React.FunctionComponent<IBurgerNavigationItem
                 {props.tabInfo.options.map((option, i) => (
                     <li
                         key={i}
-                        className='burger-navigation__sub-item-text'
+                        className='burger-navigation__sub-item'
                     >
                         <a href={option.link}>{option.title}</a>
                     </li>

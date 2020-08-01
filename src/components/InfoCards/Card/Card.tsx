@@ -2,7 +2,7 @@ import * as React from 'react';
 import {joinTruthy} from '../../../utils/utils';
 import {IInformationCard} from '../../../utils/contracts';
 
-interface ICardProps extends IInformationCard {
+export interface ICardProps extends IInformationCard {
     isHighlighted: boolean;
 }
 

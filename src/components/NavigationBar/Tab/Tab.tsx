@@ -16,7 +16,6 @@ export const Tab: React.FunctionComponent<ITabProps> = props => {
     const [isTabHovered, setIsTabHovered] = useState<boolean>(false);
     return (
         <li
-            data-qa='tab'
             className={joinTruthy([
                 'navigation-bar__tab',
                 props.isActive && 'active'
@@ -25,15 +24,14 @@ export const Tab: React.FunctionComponent<ITabProps> = props => {
             onMouseLeave={() => setIsTabHovered(false)}
         >
             <a
-                data-qa='tab-link'
                 href={props.link}
                 onClick={props.onClick}
+                className='navigation-bar__tab-link'
             >
                 {props.children}
                 {
                     props.options &&
                     <span
-                        data-qa='expand-icon'
                         className='expand-icon'
                     />
                 }

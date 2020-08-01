@@ -3,7 +3,7 @@ import './Button.scss';
 import {joinTruthy} from '../../../utils/utils';
 import {ButtonHTMLAttributes, DetailedHTMLProps} from 'react';
 
-interface IButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>{
+export interface IButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>{
     className?: string;
 }
 

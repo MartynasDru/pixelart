@@ -1,7 +1,7 @@
 import React from 'react';
 import * as Enzyme from 'enzyme';
 import {ITabsProps, Tabs} from './Tabs';
-import {NavigationTabs, NavigationTabsInfo} from '../../../utils/utils';
+import {NavigationTabs, NavigationTabsData} from '../../../utils/mockData';
 
 describe('Tabs', () => {
     const setup = (_props?: Partial<ITabsProps>) => {
@@ -18,11 +18,11 @@ describe('Tabs', () => {
     };
 
     it('renders without crashing', () => {
-        const wrapper = setup();
+        setup();
     });
 
     it('should render as many tabs as there is in NavigationTabsInfo', () => {
         const wrapper = setup();
-        expect(wrapper.find('[data-qa="tab"]').length).toBe(Object.keys(NavigationTabsInfo).length)
+        expect(wrapper.find('.navigation-bar__tab').length).toBe(Object.keys(NavigationTabsData).length)
     })
 })

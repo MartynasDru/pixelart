@@ -31,7 +31,12 @@ export const NavigationBar: React.FunctionComponent = () => {
                         setActiveTab={setActiveTab}
                     />
                 }
-                <div className='navigation-bar__toggle-open' onClick={() => setOpenDropdown(!openDropdown)}>&#9776;</div>
+                <div
+                    className='navigation-bar__toggle-open'
+                    onClick={() => setOpenDropdown(!openDropdown)}
+                >
+                    &#9776;
+                </div>
             </div>
         </div>
     )
