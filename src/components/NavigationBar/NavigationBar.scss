@@ -182,13 +182,8 @@ $ASSETS_PATH: '../../styles/assets';
     padding: 0 4rem;
     font-weight: 700;
 
-    &:hover {
+    &.active, &:hover {
       background-color: $ACTIVE_NAVIGATION_TAB;
-    }
-
-    &.active {
-      background-color: $PRIMARY_COLOR;
-      color: $WHITE;
     }
   }
 
