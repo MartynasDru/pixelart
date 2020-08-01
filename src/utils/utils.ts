@@ -1,9 +1,7 @@
-interface IHeaderNavigationTabs {
-    [key: string]: {
-        title: string;
-        link: string;
-        options?: Array<IHeaderNavigationTabOption>;
-    }
+export interface IHeaderNavigationTab {
+    title: string;
+    link: string;
+    options?: Array<IHeaderNavigationTabOption>;
 }
 
 export interface IHeaderNavigationTabOption {
@@ -24,7 +22,7 @@ export enum NavigationTabs {
     Gallery = 'Gallery',
 }
 
-export const NavigationTabsInfo: IHeaderNavigationTabs = {
+export const NavigationTabsInfo: {[key:string] : IHeaderNavigationTab} = {
     [NavigationTabs.AboutUs]: {
         title: 'About us',
         link: '/about-us'
