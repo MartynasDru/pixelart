@@ -10,7 +10,9 @@ interface IBurgerNavigationProps {
 export const BurgerNavigation: React.FunctionComponent<IBurgerNavigationProps> = props => (
     <ul className='burger-navigation'>
         {Object.entries(NavigationTabsInfo).map((tab, index) => (
-            <li className='burger-navigation__item'>
+            <li
+                key={index}
+                className='burger-navigation__item'>
                 <a
                     href={tab[1].link}
                     className={joinTruthy([
@@ -36,8 +38,9 @@ export const BurgerNavigation: React.FunctionComponent<IBurgerNavigationProps> =
                     <ul
                         className='burger-navigation__sub-menu'
                     >
-                        {tab[1].options.map(option => (
+                        {tab[1].options.map((option, i) => (
                             <li
+                                key={i}
                                 className='burger-navigation__sub-item-text'
                             >
                                 <a href={option.link}>{option.title}</a>

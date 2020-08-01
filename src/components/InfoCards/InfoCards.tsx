@@ -6,9 +6,9 @@ import {Card} from './Card/Card';
 
 export const InfoCards: React.FunctionComponent = () => (
     <div className='info-cards'>
-        {CardsInformation.map(cardInfo => (
+        {CardsInformation.map((cardInfo, index) => (
             <Card
-                key={cardInfo.id}
+                key={index}
                 title={cardInfo.title}
                 description={cardInfo.description}
                 isHighlighted={cardInfo.id === 2}

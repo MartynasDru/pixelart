@@ -56,7 +56,7 @@ $ASSETS_PATH: '../../styles/assets';
     cursor: pointer;
     position: relative;
 
-    a {
+    & > a {
       display: flex;
       align-items: center;
       width: 100%;
