@@ -2,7 +2,7 @@ import * as React from 'react';
 import '../Footer.scss';
 import {ReactElement} from 'react';
 
-interface IFooterColumnProps {
+export interface IFooterColumnProps {
     title: string | ReactElement;
     content: string | ReactElement;
 }

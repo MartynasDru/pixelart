@@ -26,6 +26,7 @@ export const Footer: React.FunctionComponent = () => (
                             TopicsData.map((topicData, index) => (
                                 <li
                                     key={index}
+                                    className='footer__topics-list-row'
                                 >
                                     <a href={topicData.link}>· {topicData.title}</a>
                                 </li>
@@ -45,6 +46,7 @@ export const Footer: React.FunctionComponent = () => (
                             ContactsData.map((contactData, index) => (
                                 <li
                                     key={index}
+                                    className='footer__contacts-list-row'
                                 >
                                     <label>{contactData.label}:</label> {contactData.info}
                                 </li>
