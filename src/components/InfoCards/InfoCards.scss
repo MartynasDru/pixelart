@@ -1,13 +1,16 @@
+/* autoprefixer grid: autoplace */
 @import '../../styles/mixins';
 @import '../../styles/colors';
 
 .info-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
   grid-gap: 2rem;
 
   @include medium-device {
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
   }
 
   &__card {
@@ -27,6 +30,8 @@
     text-transform: uppercase;
     font-size: 2.4rem;
     letter-spacing: .2rem;
+    word-break: break-word;
+    word-wrap: break-word;
 
     &::after {
       content: '';

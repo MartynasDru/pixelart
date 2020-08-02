@@ -14,6 +14,10 @@ $ASSETS_PATH: '../../styles/assets';
     padding: 0 4rem;
   }
 
+  @include small-device {
+    padding: 0 1rem;
+  }
+
   &__left {
     display: flex;
     align-items: center;

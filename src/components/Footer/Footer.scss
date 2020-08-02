@@ -1,5 +1,7 @@
+/* autoprefixer grid: autoplace */
 @import './../../styles/colors.scss';
 @import '../../styles/mixins';
+
 
 .footer {
   background-color: $FOOTER_BACKGROUND;
@@ -7,14 +9,16 @@
   &__main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
     padding: 8rem 16rem;
 
     @include large-device {
-      padding: 2rem 4rem;
+      padding: 1rem 1rem;
     }
 
     @include medium-device {
       grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
       grid-gap: 2rem;
     }
   }
@@ -89,10 +93,14 @@
   }
 
   &__logo {
-    background-image: $MAIN_GRADIENT;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+    // Background-clip rule should be applied only in environment where it`s supported
+    // in order text could fallback to just black color (IE11 problem)
+    @supports (background-clip: text) {
+      background-image: $MAIN_GRADIENT;
+      text-fill-color: trasparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   &__slogan {

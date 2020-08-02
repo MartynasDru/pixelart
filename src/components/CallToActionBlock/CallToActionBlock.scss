@@ -37,6 +37,7 @@
     color: $TITLE_BLACK;
 
     @include medium-device {
+      width: 100%;
       text-align: center;
     }
   }
@@ -49,6 +50,10 @@
 
     @include medium-device {
       margin-top: 2rem;
+    }
+
+    @include small-device {
+      width: 12rem;
     }
   }
 }
