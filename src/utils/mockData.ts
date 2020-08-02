@@ -75,7 +75,8 @@ export const InformationCardsData: {[key in InformationCards]: IInformationCard}
     },
     [InformationCards.AppDevelopment]: {
         title: 'App development',
-        description: 'Supply efficient integrated architectures with unique best practices. Assertively strategize pandemic sources.'
+        description: 'Supply efficient integrated architectures with unique best practices. Assertively strategize pandemic sources.',
+        isHighlighted: true
     }
 }
 

@@ -12,6 +12,7 @@ export interface IHeaderNavigationTabOption {
 export interface IInformationCard {
     title: string;
     description: string;
+    isHighlighted?: boolean;
 }
 
 export interface ITopic {

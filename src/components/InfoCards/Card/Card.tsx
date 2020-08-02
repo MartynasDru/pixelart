@@ -3,7 +3,7 @@ import {joinTruthy} from '../../../utils/utils';
 import {IInformationCard} from '../../../utils/contracts';
 
 export interface ICardProps extends IInformationCard {
-    isHighlighted: boolean;
+    isHighlighted?: boolean;
 }
 
 export const Card: React.FunctionComponent<ICardProps> = props => (

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './InfoCards.scss';
-import {InformationCardsData, InformationCards} from '../../utils/mockData';
+import {InformationCardsData} from '../../utils/mockData';
 import {Card} from './Card/Card';
 
 export const InfoCards: React.FunctionComponent = () => (
@@ -10,7 +10,7 @@ export const InfoCards: React.FunctionComponent = () => (
                 key={index}
                 title={cardData[1].title}
                 description={cardData[1].description}
-                isHighlighted={cardData[0] === InformationCards.AppDevelopment}
+                isHighlighted={cardData[1].isHighlighted}
             >
                 {cardData[1].title}
             </Card>
