@@ -12,9 +12,9 @@ export const Dropdown: React.FunctionComponent<IDropdownProps> = props => (
         className='navigation-bar__tab-dropdown'
     >
         {
-            props.options.map((option, index) => (
+            props.options.map(option => (
                 <li
-                    key={index}
+                    key={option.link}
                     className='navigation-bar__tab-dropdown-row'
                     onClick={props.onClick}
                 >

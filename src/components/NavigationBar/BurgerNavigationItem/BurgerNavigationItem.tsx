@@ -33,9 +33,9 @@ export const BurgerNavigationItem: React.FunctionComponent<IBurgerNavigationItem
             <ul
                 className='burger-navigation__sub-menu'
             >
-                {props.tabInfo.options.map((option, i) => (
+                {props.tabInfo.options.map(option => (
                     <li
-                        key={i}
+                        key={option.link}
                         className='burger-navigation__sub-item'
                     >
                         <a href={option.link}>{option.title}</a>
