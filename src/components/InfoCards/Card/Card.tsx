@@ -12,7 +12,6 @@ export const Card: React.FunctionComponent<ICardProps> = props => (
         props.isHighlighted && 'highlighted'
     ])}>
         <h3 className='info-cards__title'>{props.title}</h3>
-        <span className='info-cards__separator' />
         <div className='info-cards__description'>{props.description}</div>
     </div>
 );

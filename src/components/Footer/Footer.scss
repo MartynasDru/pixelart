@@ -100,19 +100,25 @@
     line-height: 2.4rem;
   }
 
-  &__separator {
-    display: block;
-    height: 4px;
-    background-image: $MAIN_GRADIENT;
-  }
-
   &__copyright {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     background-color: $BLACK;
     font-size: 1.2rem;
     color: #a5a5a5;
     height: 3.7rem;
+    margin-top: .4rem;
+
+    &::before {
+      content: '';
+      display: block;
+      background-image: $MAIN_GRADIENT;
+      height: .4rem;
+      width: 100%;
+      position: absolute;
+      top: -.4rem;
+    }
   }
 }

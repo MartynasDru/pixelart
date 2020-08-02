@@ -10,9 +10,7 @@ export const Footer: React.FunctionComponent = () => (
         <div className='footer__main'>
             <FooterColumn
                 title={
-                    <Logo
-                        className='footer__logo'
-                    />
+                    <Logo className='footer__logo'/>
                 }
                 content={
                     <p className='footer__slogan'>A user interface is like a joke. If you have to explain it, it’s not that good</p>
@@ -55,7 +53,6 @@ export const Footer: React.FunctionComponent = () => (
                     </ul>}
             />
         </div>
-        <span className='footer__separator'/>
         <div className='footer__copyright'>
             Copyright © 2020
         </div>

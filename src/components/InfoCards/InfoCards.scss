@@ -27,14 +27,15 @@
     text-transform: uppercase;
     font-size: 2.4rem;
     letter-spacing: .2rem;
-  }
 
-  &__separator {
-    display: block;
-    width: 4rem;
-    height: .3rem;
-    background-image: $MAIN_GRADIENT;
-    margin: 2rem 0;
+    &::after {
+      content: '';
+      display: block;
+      width: 4rem;
+      height: .3rem;
+      background-image: $MAIN_GRADIENT;
+      margin: 2rem 0;
+    }
   }
 
   &__description {
