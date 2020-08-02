@@ -10,8 +10,7 @@ export interface IBurgerNavigationItemProps {
 }
 
 export const BurgerNavigationItem: React.FunctionComponent<IBurgerNavigationItemProps> = props => (
-    <li
-        className='burger-navigation__item'>
+    <li className='burger-navigation__item'>
         <a
             href={props.tabInfo.link}
             className={joinTruthy([
@@ -23,9 +22,7 @@ export const BurgerNavigationItem: React.FunctionComponent<IBurgerNavigationItem
             {props.tabInfo.title}
             {
                 props.tabInfo.options &&
-                <span
-                    className='expand-icon'
-                />
+                <span className='expand-icon' />
             }
         </a>
         {
@@ -35,7 +32,7 @@ export const BurgerNavigationItem: React.FunctionComponent<IBurgerNavigationItem
             >
                 {props.tabInfo.options.map(option => (
                     <li
-                        key={option.link}
+                        key={option.title}
                         className='burger-navigation__sub-item'
                     >
                         <a href={option.link}>{option.title}</a>

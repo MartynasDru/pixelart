@@ -10,9 +10,7 @@ describe('Dropdown', () => {
             onClick: jest.fn()
         }, _props);
 
-        const wrapper = Enzyme.mount(
-            <Dropdown {...props} />
-        );
+        const wrapper = Enzyme.mount(<Dropdown {...props} />);
 
         return {
             wrapper,

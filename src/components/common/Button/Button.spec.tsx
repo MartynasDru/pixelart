@@ -8,9 +8,7 @@ describe('Button', () => {
             onClick: jest.fn()
         }, _props);
 
-        const wrapper = Enzyme.mount(
-            <Button {...props} />
-        );
+        const wrapper = Enzyme.mount(<Button {...props} />);
 
         return {
             wrapper,

@@ -4,15 +4,13 @@ import {ITabsProps, Tabs} from './Tabs';
 import {NavigationTabs, NavigationTabsData} from '../../../utils/mockData';
 
 describe('Tabs', () => {
-    const setup = (_props?: Partial<ITabsProps>) => {
-        const props: ITabsProps = Object.assign({}, {
+    const setup = () => {
+        const props: ITabsProps = {
             activeTab: NavigationTabs.AboutUs,
             setActiveTab: jest.fn()
-        }, _props);
+        };
 
-        const wrapper = Enzyme.mount(
-            <Tabs {...props}/>
-        );
+        const wrapper = Enzyme.mount(<Tabs {...props}/>);
 
         return wrapper;
     };

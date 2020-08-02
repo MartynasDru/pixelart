@@ -10,9 +10,7 @@ describe('Card', () => {
             description: 'description'
         }, _props);
 
-        const wrapper = Enzyme.mount(
-            <Card {...props} />
-        );
+        const wrapper = Enzyme.mount(<Card {...props} />);
 
         return wrapper;
     };

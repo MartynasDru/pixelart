@@ -3,14 +3,7 @@ import * as Enzyme from 'enzyme';
 import {NavigationBar} from './NavigationBar';
 
 describe('Navigation', () => {
-    const setup = () => {
-
-        const wrapper = Enzyme.mount(
-            <NavigationBar />
-        );
-
-        return wrapper;
-    };
+    const setup = () => Enzyme.mount(<NavigationBar />);
 
     it('renders without crashing', () => {
         setup();

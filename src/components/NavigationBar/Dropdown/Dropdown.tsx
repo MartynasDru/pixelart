@@ -8,9 +8,7 @@ export interface IDropdownProps {
 }
 
 export const Dropdown: React.FunctionComponent<IDropdownProps> = props => (
-    <ul
-        className='navigation-bar__tab-dropdown'
-    >
+    <ul className='navigation-bar__tab-dropdown'>
         {
             props.options.map(option => (
                 <li
@@ -18,9 +16,7 @@ export const Dropdown: React.FunctionComponent<IDropdownProps> = props => (
                     className='navigation-bar__tab-dropdown-row'
                     onClick={props.onClick}
                 >
-                    <a
-                        href={option.link}
-                    >
+                    <a href={option.link}>
                         {option.title}
                     </a>
                 </li>

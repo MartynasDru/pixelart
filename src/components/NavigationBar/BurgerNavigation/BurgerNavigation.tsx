@@ -9,9 +9,7 @@ export interface IBurgerNavigationProps {
 }
 
 export const BurgerNavigation: React.FunctionComponent<IBurgerNavigationProps> = props => (
-    <ul
-        className='burger-navigation'
-    >
+    <ul className='burger-navigation'>
         {Object.entries(NavigationTabsData).map(tabData => (
             <BurgerNavigationItem
                 key={tabData[0]}

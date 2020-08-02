@@ -10,9 +10,7 @@ describe('BurgerNavigationItem', () => {
             tabInfo: {}
         }, _props);
 
-        const wrapper = Enzyme.mount(
-            <BurgerNavigationItem {...props} />
-        );
+        const wrapper = Enzyme.mount(<BurgerNavigationItem {...props} />);
 
         return {
             wrapper,
@@ -69,8 +67,8 @@ describe('BurgerNavigationItem', () => {
                         link: 'link'
                     },
                     {
-                        title: 'title',
-                        link: 'link'
+                        title: 'title1',
+                        link: 'link1'
                     }
                 ]
             }

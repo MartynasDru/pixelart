@@ -15,9 +15,7 @@ export const NavigationBar: React.FunctionComponent = () => {
         <div className='navigation-bar'>
             <div className='navigation-bar__left'><Logo /></div>
             <div className='navigation-bar__right'>
-                <Button
-                    className='navigation-bar__action-button'
-                >
+                <Button className='navigation-bar__action-button'>
                     Get in touch
                 </Button>
                 <Tabs

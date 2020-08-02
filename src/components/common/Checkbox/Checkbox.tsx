@@ -20,16 +20,13 @@ export const Checkbox: React.FunctionComponent<ICheckboxProps> = props => (
                 className='checkbox__input'
                 type='checkbox'
                 checked={props.checked}
-                name='remember'
-                value='Remember me'
+                name='checkbox'
                 onChange={props.onChange}
             />
         </label>
         {
             props.labelText &&
-            <label
-                className='checkbox__label'
-            >
+            <label className='checkbox__label'>
                 {props.labelText}
             </label>
         }

@@ -4,14 +4,7 @@ import {Footer} from './Footer';
 import {ContactsData, TopicsData} from '../../utils/mockData';
 
 describe('Footer', () => {
-    const setup = () => {
-
-        const wrapper = Enzyme.mount(
-            <Footer />
-        );
-
-        return wrapper;
-    };
+    const setup = () => Enzyme.mount(<Footer />);
 
     it('renders without crashing', () => {
         setup();

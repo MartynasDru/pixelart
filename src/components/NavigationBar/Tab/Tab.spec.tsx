@@ -12,9 +12,7 @@ describe('Tab', () => {
 
         }, _props);
 
-        const wrapper = Enzyme.mount(
-            <Tab {...props} />
-        );
+        const wrapper = Enzyme.mount(<Tab {...props} />);
 
         return {
             wrapper,

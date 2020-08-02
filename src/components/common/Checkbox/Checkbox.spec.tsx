@@ -9,9 +9,7 @@ describe('Checkbox', () => {
             onChange: jest.fn()
         }, _props);
 
-        const wrapper = Enzyme.mount(
-            <Checkbox {...props} />
-        );
+        const wrapper = Enzyme.mount(<Checkbox {...props} />);
 
         return {
             wrapper,

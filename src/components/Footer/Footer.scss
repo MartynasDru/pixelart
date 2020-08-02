@@ -90,6 +90,7 @@
 
   &__logo {
     background-image: $MAIN_GRADIENT;
+    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
   }
@@ -119,6 +120,7 @@
       width: 100%;
       position: absolute;
       top: -.4rem;
+      left: 0;
     }
   }
 }

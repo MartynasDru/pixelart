@@ -4,14 +4,7 @@ import {InfoCards} from './InfoCards';
 import {InformationCardsData} from '../../utils/mockData';
 
 describe('InfoCards', () => {
-    const setup = () => {
-
-        const wrapper = Enzyme.mount(
-            <InfoCards />
-        );
-
-        return wrapper;
-    };
+    const setup = () => Enzyme.mount(<InfoCards />);
 
     it('renders without crashing', () => {
         setup();

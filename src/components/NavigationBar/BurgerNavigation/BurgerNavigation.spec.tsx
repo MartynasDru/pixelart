@@ -10,9 +10,7 @@ describe('BurgerNavigation', () => {
             setActiveTab: jest.fn()
         }, _props);
 
-        const wrapper = Enzyme.mount(
-            <BurgerNavigation {...props} />
-        );
+        const wrapper = Enzyme.mount(<BurgerNavigation {...props} />);
 
         return {
             wrapper,
