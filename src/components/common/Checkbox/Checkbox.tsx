@@ -4,7 +4,7 @@ import {joinTruthy} from '../../../utils/utils';
 
 export interface ICheckboxProps {
     checked: boolean;
-    onChange: () => void;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     labelText?: string;
 }
 
@@ -21,7 +21,7 @@ export const Checkbox: React.FunctionComponent<ICheckboxProps> = props => (
                 type='checkbox'
                 checked={props.checked}
                 name='checkbox'
-                onChange={props.onChange}
+                onChange={e => props.onChange(e)}
             />
         </label>
         {
