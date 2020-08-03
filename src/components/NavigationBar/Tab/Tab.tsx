@@ -26,15 +26,12 @@ export const Tab: React.FunctionComponent<ITabProps> = props => {
             <a
                 href={props.link}
                 onClick={props.onClick}
-                className='navigation-bar__tab-link'
+                className={joinTruthy([
+                    'navigation-bar__tab-link',
+                    props.options && 'with-dropdown'
+                ])}
             >
                 {props.children}
-                {
-                    props.options &&
-                    <span
-                        className='expand-icon'
-                    />
-                }
             </a>
             {
                 (props.options && isTabHovered ) &&

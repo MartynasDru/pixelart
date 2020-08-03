@@ -33,8 +33,9 @@ $ASSETS_PATH: '../../styles/assets';
     margin-right: 2.5rem;
     width: 13rem;
 
-    @include small-device {
-      display: none;
+    @include large-device {
+      margin-right: 1rem;
+      width: 10rem;
     }
   }
 
@@ -66,21 +67,16 @@ $ASSETS_PATH: '../../styles/assets';
       width: 100%;
       height: 100%;
       padding: 0 2.5rem 0 2.5rem;
+      text-align: center;
+
+      @include large-device {
+          padding: 0 1.5rem 0 1.5rem;
+      }
     }
   }
 
   .active {
     background-color: $ACTIVE_NAVIGATION_TAB;
-  }
-
-  .expand-icon {
-    -webkit-mask-image: url('#{$ASSETS_PATH}/Triangle.svg');
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center center;
-    background-color: $BLACK;
-    width: .6rem;
-    height: .3rem;
-    margin-left: 1rem;
   }
 
   &__tab-dropdown {
@@ -94,16 +90,19 @@ $ASSETS_PATH: '../../styles/assets';
     padding: 1rem;
     cursor: default;
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: -.7rem;
-      display: block;
-      height: .7rem;
-      width: 1.4rem;
-      background-color: white;
-      clip-path: polygon(50% 0, 0 100%, 100% 100%);
-      left: calc(50% - .7rem);
+    //IE11 does not support clip path so dont use it there
+    @supports (clip-path: polygon(50% 0, 0 100%, 100% 100%)) {
+      &::before {
+        content: '';
+        position: absolute;
+        top: -.7rem;
+        display: block;
+        height: .7rem;
+        width: 1.4rem;
+        background-color: white;
+        clip-path: polygon(50% 0, 0 100%, 100% 100%);
+        left: calc(50% - .7rem);
+      }
     }
 
     &::after {
@@ -153,6 +152,33 @@ $ASSETS_PATH: '../../styles/assets';
       display: flex;
     }
   }
+
+  &__tab-link.with-dropdown::after {
+      content: '';
+      display: block;
+      width: .6rem;
+      height: .3rem;
+      background-image: url('#{$ASSETS_PATH}/Triangle.svg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      margin-left: 1rem;
+
+    @include large-device {
+      margin-left: .5rem;
+    }
+
+    //IE11 does not support -webkit-mask-image so dont use it there
+    @supports (-webkit-mask-image: url('#{$ASSETS_PATH}/Triangle.svg')) {
+      content: '';
+      -webkit-mask-image: url('#{$ASSETS_PATH}/Triangle.svg');
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center center;
+      background-color: $BLACK;
+      width: .6rem;
+      height: .3rem;
+      margin-left: 1rem;
+    }
+  }
 }
 
 .burger-navigation {
@@ -198,5 +224,28 @@ $ASSETS_PATH: '../../styles/assets';
   }
   &__sub-item {
     font-weight: 400;
+  }
+
+  &__item-link.with-dropdown::after {
+    content: '';
+    display: block;
+    width: .6rem;
+    height: .3rem;
+    background-image: url('#{$ASSETS_PATH}/Triangle.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-left: 1rem;
+
+    //IE11 does not support -webkit-mask-image so dont use it there
+    @supports (-webkit-mask-image: url('#{$ASSETS_PATH}/Triangle.svg')) {
+      content: '';
+      -webkit-mask-image: url('#{$ASSETS_PATH}/Triangle.svg');
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center center;
+      background-color: $BLACK;
+      width: .6rem;
+      height: .3rem;
+      margin-left: 1rem;
+    }
   }
 }

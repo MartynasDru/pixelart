@@ -5,5 +5,5 @@
   @media (max-width: 768px) { @content; }
 }
 @mixin large-device {
-  @media (max-width: 992px) { @content; }
+  @media (max-width: 1200px) { @content; }
 }

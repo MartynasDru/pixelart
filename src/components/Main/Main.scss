@@ -61,11 +61,13 @@
   .highlighted-text-box {
     background-color: $HIGHLIGHTED_TEXT_BOX_BACKGROUND;
     padding: 4rem;
-    border-top-right-radius: .4rem;
-    border-bottom-right-radius: .4rem;
+    border-radius: .4rem;
     position: relative;
 
     @supports (clip-path: polygon(100% 0, 0 0, 100% 100%)) {
+      border-top-right-radius: .4rem;
+      border-bottom-right-radius: .4rem;
+
       &::before {
         content: '';
         width: 4rem;

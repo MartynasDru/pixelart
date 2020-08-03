@@ -15,15 +15,12 @@ export const BurgerNavigationItem: React.FunctionComponent<IBurgerNavigationItem
             href={props.tabInfo.link}
             className={joinTruthy([
                 'burger-navigation__item-link',
+                props.tabInfo.options && 'with-dropdown',
                 props.isActive && 'active'
             ])}
             onClick={() => props.onClick()}
         >
             {props.tabInfo.title}
-            {
-                props.tabInfo.options &&
-                <span className='expand-icon' />
-            }
         </a>
         {
             props.tabInfo.options &&
