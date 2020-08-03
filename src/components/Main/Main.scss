@@ -65,32 +65,34 @@
     border-bottom-right-radius: .4rem;
     position: relative;
 
-    @include small-device {
-      &::before, &::after {
-        display: none;
+    @supports (clip-path: polygon(100% 0, 0 0, 100% 100%)) {
+      &::before {
+        content: '';
+        width: 4rem;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -4rem;
+        background-color: $HIGHLIGHTED_TEXT_BOX_BACKGROUND;
+        border-top-left-radius: .4rem;
       }
-    }
 
-    &::before {
-      content: '';
-      width: 4rem;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: -4rem;
-      background-color: $HIGHLIGHTED_TEXT_BOX_BACKGROUND;
-      border-top-left-radius: .4rem;
-    }
+      &::after {
+        content: '';
+        width: 1.9rem;
+        height: 1rem;
+        background-color: $HIGHLIGHTED_TEXT_BOX_SHADOW;
+        position: absolute;
+        bottom: -1rem;
+        left: -4rem;
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+      }
 
-    &::after {
-      content: '';
-      width: 1.9rem;
-      height: 1rem;
-      background-color: $HIGHLIGHTED_TEXT_BOX_SHADOW;
-      position: absolute;
-      bottom: -1rem;
-      left: -4rem;
-      clip-path: polygon(100% 0, 0 0, 100% 100%);
+      @include small-device {
+        &::before, &::after {
+          display: none;
+        }
+      }
     }
 
     &__quote-sign {
@@ -99,20 +101,29 @@
       font-size: 8.2rem;
       position: absolute;
       top: 1.5rem;
-      left: -2rem;
+      left: 1rem;
       color: $ARTICLE_TEXT;
 
-      @include small-device {
-        left: 1rem;
+      @supports (clip-path: polygon(100% 0, 0 0, 100% 100%)) {
+        left: -2rem;
+
+        @include small-device {
+          left: 1rem;
+        }
       }
     }
 
     &__text {
       color: $HIGHLIGHTED_TEXT_BOX_TEXT;
       margin-bottom: 1rem;
+      margin-left: 1rem;
 
-      @include small-device {
-        margin-left: 1rem;
+      @supports (clip-path: polygon(100% 0, 0 0, 100% 100%)) {
+        margin-left: 0;
+
+        @include small-device {
+          margin-left: 1rem;
+        }
       }
     }
 
